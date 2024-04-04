@@ -1,0 +1,170 @@
+@import './global-style.css';
+
+.header {
+  border: 1px solid red;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+}
+
+.logo {
+  height: 100%;
+  align-content: center;
+}
+
+.logo-img {
+  height: 98%;
+}
+
+.navbar-main {
+  display: none;
+}
+
+/* .navbar-main ul li a {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  align-content: center;
+  height: 100%;
+} */
+
+.donations-button {
+  display: none;
+}
+
+.hamburguer-menu {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+}
+
+.hamburguer-menu svg {
+  border-radius: 0.8rem;
+  cursor: pointer;
+  align-content: center;
+  stroke: #0059ff;
+  transition: all 3ms;
+}
+
+.hamburguer-menu svg:hover {
+  background-color: #d1ebff;
+  stroke: var(--israel-blue-800);
+}
+
+@media (min-width: 768px) {
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .navbar-main {
+    display: block;
+    height: 100%;
+  }
+
+  .navbar-main ul {
+    display: flex;
+    height: 100%;
+  }
+
+  .navbar-main ul li a {
+    display: block;
+    padding: 0 2rem;
+    align-content: center;
+    height: 100%;
+
+    font-size: 1.5rem;
+    text-align: center;
+    color: #161c2d;
+  }
+
+  /* Para que no se mueva el punto del before si no es ActiveLink */
+  .navbar-main ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #0040ff;
+    opacity: 0; /* Hacerlo invisible */
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    transition: opacity 0.3s;
+  }
+
+  .navbar-main ul li a:visited {
+    color: #161c2d;
+    text-decoration: none;
+  }
+
+  .navbar-main ul li a:hover {
+    color: #0059ff;
+    transition: color 3ms;
+  }
+
+  /* Active link */
+  .navbar-main ul .current_page_item a {
+    color: #0040ff;
+    transition: color 3ms;
+  }
+
+  .navbar-main ul .current_page_item a:visited {
+    color: #0040ff;
+  }
+
+  .navbar-main ul .current_page_item a:hover {
+    color: #0059ff;
+  }
+
+  .navbar-main .current_page_item a::before {
+    content: '';
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #0040ff;
+    opacity: 1;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+
+  .navbar-main .current_page_item a:hover::before {
+    opacity: 0.5;
+  }
+
+  /* DONATIONS BUTTON */
+  .donations-button {
+    display: inline-block;
+
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    width: 13rem;
+    height: 4rem;
+
+    align-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+
+    background: linear-gradient(300deg, var(--color-warning-500), #FFCD48);
+    color: hsl(0, 0%, 40%);
+    box-shadow: 0px 5px 13px -8px var(--color-warning2-500);
+
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .donations-button:hover {
+    background: linear-gradient(to bottom, #FFCD48, hsl(44, 100%, 70%));
+    box-shadow: none;
+  }
+
+  /* HAMBURGER MENU */
+  .hamburguer-menu {
+    display: none;
+  }
+}

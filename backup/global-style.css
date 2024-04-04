@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* Fonts */
+  --main-font: 'Poppins', sans-serif;
+
+  /* Colors */
+  --israel-blue-50: #ebf6ff; /* ? */
+  --israel-blue-100: #d1ebff; /* ? */
+  --israel-blue-200: #aeddff; /* ? */
+  --israel-blue-300: #76c9ff; /* ? */
+  --israel-blue-400: #35aaff; /* ? */
+  --israel-blue-500: #0780ff; /* Lighter */
+  --israel-blue-600: #0059ff; /* Light */
+  --israel-blue-700: #0040ff; /* Primary */
+  --israel-blue-800: #0035d7; /* Dark */
+  --israel-blue-900: #0038b8; /* Darker: Israel flag color */
+  --israel-blue-950: #062065; /* ? */
+
+  --Dodger-Blue: #1489f4; /* Primary */
+  --Ebony-Clay: #26263b; /* Info */
+  --Ocean-Green: #3ba481; /* Success */
+  --Tussock: #b99449; /* Warning */
+  --Pomegranate: #f44336; /* Danger */
+
+  --color-primary-600-light: #0059ff;
+  --color-primary-700: #0040ff;
+  --color-primary-900-darker: #0038b8;
+  --color-success-500: #4cdd42;
+  --color-success2-500: #58ba27;
+  --color-info-500: #36bff9;
+  --color-info2-500: #0c9af9;
+  --color-warning-500: #f9da27;
+  --color-warning2-500: #ffb60c;
+  --color-warning3-500: #ffc800;
+  --color-danger-500: #fc2323;
+  --color-danger2-500: #ff4b3a;
+
+  --color-primary-600-light-hsl: hsl(219, 100%, 50%);
+  --color-primary-700-hsl: hsl(225, 100%, 50%);
+  --color-primary-900-darker-hsl: hsl(222, 100%, 36%);
+
+  --color-success-500-hsl: hsl(116, 70%, 56%);
+  --color-info-500-hsl: hsl(198, 94%, 59%);
+  --color-warning-500-hsl: hsl(51, 95%, 56%);
+  --color-danger-500-hsl: hsl(0, 97%, 56%);
+
+  /* Primary */
+  --color-primary-light: hsl(219, 100%, 50%);
+
+  --color-primary-h: 225;
+  --color-primary-s: 100%;
+  --color-primary-l: 50%;
+
+  --color-primary: hsl(225, 100%, 50%);
+
+  --color-primary-darker-h: 222;
+  --color-primary-darker-s: 100%;
+  --color-primary-darker-l: 36%;
+
+  --color-primary-darker: hsl(222, 100%, 36%);
+
+  /* White */
+  --color-white-h: 0;
+  --color-white-s: 0%;
+  --color-white-l: 100%;
+
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Black */
+  --color-black-h: 231;
+  --color-black-s: 15%;
+  --color-black-l: 9%;
+
+  --color-black: hsl(231, 15%, 9%);
+
+  /* Background (bg) */
+  --color-bg: hsl(0, 0%, 100%);
+
+  --color-bg-lighter: hsl(0, 0%, 100%);
+
+  --color-bg-light: hsl(0, 0%, 100%);
+
+  --color-bg-dark: hsl(240, 4%, 95%);
+
+  /* Contrast */
+  --color-contrast-higher-h: 230;
+  --color-contrast-higher-s: 13%;
+  --color-contrast-higher-l: 9%;
+
+  --color-contrast-higher: hsl(230, 13%, 9%);
+
+  --color-contrast-high: hsl(230, 7%, 23%);
+
+  /* Accent */
+  --color-accent-light: hsl(342, 89%, 56%);
+
+  --color-accent-h: 342;
+  --color-accent-s: 89%;
+  --color-accent-l: 48%;
+
+  --color-accent: hsl(342, 89%, 48%);
+
+  --color-accent-darker-h: 342;
+  --color-accent-darker-s: 89%;
+  --color-accent-darker-l: 38%;
+
+  --color-accent-darker: hsl(342, 89%, 38%);
+
+  --metallic-bronze-50: #f7f8ee;
+  --metallic-bronze-100: #ebefd2;
+  --metallic-bronze-200: #dae0a8;
+  --metallic-bronze-300: #c8ce76;
+  --metallic-bronze-400: #bcbf50;
+  --metallic-bronze-500: #b0ae42;
+  --metallic-bronze-600: #978e37;
+  --metallic-bronze-700: #7a6c2e;
+  --metallic-bronze-800: #66582d;
+  --metallic-bronze-900: #594b2a;
+  --metallic-bronze-950: #47391e;
+
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  --radius-md: 0.375rem;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px = 1rem */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2;
+  background-color: var(--light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  margin: 0 0 5rem 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h6 {
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: min(95%, 120rem);
+  margin: 0 auto;
+}
+
+/* BUTTONS */
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  background: var(--color-bg-dark);
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-contrast-higher);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: 0.2s;
+  will-change: transform;
+}
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg),
+    0 0 0 4px
+      hsla(
+        var(--color-contrast-higher-h),
+        var(--color-contrast-higher-s),
+        var(--color-contrast-higher-l),
+        0.15
+      );
+}
+.btn:active {
+  transform: translateY(2px);
+}
+
+/* primary */
+.btn--primary {
+  background: var(--color-primary);
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.15
+      ),
+    0 1px 3px
+      hsla(
+        var(--color-primary-darker-h),
+        var(--color-primary-darker-s),
+        var(--color-primary-darker-l),
+        0.25
+      ),
+    0 2px 6px
+      hsla(
+        var(--color-primary-darker-h),
+        var(--color-primary-darker-s),
+        var(--color-primary-darker-l),
+        0.1
+      ),
+    0 6px 10px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25);
+  color: var(--color-white);
+}
+.btn--primary:hover {
+  background: var(--color-primary-light);
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.15
+      ),
+    0 1px 2px
+      hsla(
+        var(--color-primary-darker-h),
+        var(--color-primary-darker-s),
+        var(--color-primary-darker-l),
+        0.25
+      ),
+    0 1px 4px
+      hsla(
+        var(--color-primary-darker-h),
+        var(--color-primary-darker-s),
+        var(--color-primary-darker-l),
+        0.1
+      ),
+    0 3px 6px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25);
+}
+.btn--primary:focus-visible {
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.15
+      ),
+    0 1px 2px
+      hsla(
+        var(--color-primary-darker-h),
+        var(--color-primary-darker-s),
+        var(--color-primary-darker-l),
+        0.25
+      ),
+    0 1px 4px
+      hsla(
+        var(--color-primary-darker-h),
+        var(--color-primary-darker-s),
+        var(--color-primary-darker-l),
+        0.1
+      ),
+    0 3px 6px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25),
+    0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-primary);
+}
+
+/* subtle */
+.btn--subtle {
+  background: var(--color-bg-lighter);
+  color: var(--color-contrast-higher);
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.1
+      ),
+    0 0 0 1px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.02
+      ),
+    0 0.3px 0.4px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.025
+      ),
+    0 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2),
+    0 3.5px 6px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.12
+      );
+}
+.btn--subtle:hover {
+  background: var(--color-bg-light);
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.1
+      ),
+    0 0 0 1px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.02
+      ),
+    0 0.1px 0.3px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.06
+      ),
+    0 1px 2px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.12
+      ),
+    0 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2);
+}
+.btn--subtle:focus-visible {
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.1
+      ),
+    0 0 0 1px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.02
+      ),
+    0 0.3px 0.4px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.025
+      ),
+    0 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2),
+    0 3.5px 6px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.12
+      ),
+    0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-contrast-high);
+}
+
+/* accent */
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.15
+      ),
+    0 1px 3px
+      hsla(
+        var(--color-accent-darker-h),
+        var(--color-accent-darker-s),
+        var(--color-accent-darker-l),
+        0.25
+      ),
+    0 2px 6px
+      hsla(
+        var(--color-accent-darker-h),
+        var(--color-accent-darker-s),
+        var(--color-accent-darker-l),
+        0.1
+      ),
+    0 6px 10px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25);
+}
+.btn--accent:hover {
+  background: var(--color-accent-light);
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.15
+      ),
+    0 1px 2px
+      hsla(
+        var(--color-accent-darker-h),
+        var(--color-accent-darker-s),
+        var(--color-accent-darker-l),
+        0.25
+      ),
+    0 1px 4px
+      hsla(
+        var(--color-accent-darker-h),
+        var(--color-accent-darker-s),
+        var(--color-accent-darker-l),
+        0.1
+      ),
+    0 3px 6px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1);
+}
+.btn--accent:focus-visible {
+  box-shadow: inset 0 1px 0
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.15
+      ),
+    0 1px 2px
+      hsla(
+        var(--color-accent-darker-h),
+        var(--color-accent-darker-s),
+        var(--color-accent-darker-l),
+        0.25
+      ),
+    0 1px 4px
+      hsla(
+        var(--color-accent-darker-h),
+        var(--color-accent-darker-s),
+        var(--color-accent-darker-l),
+        0.1
+      ),
+    0 3px 6px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1),
+    0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* contrast */
+.btn--contrast {
+  background: hsla(
+    var(--color-contrast-higher-h),
+    var(--color-contrast-higher-s),
+    var(--color-contrast-higher-l),
+    0.95
+  );
+  color: var(--color-bg);
+  box-shadow: 0 0.1px 0.3px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.06
+      ),
+    0 1px 2px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.12
+      );
+}
+.btn--contrast:hover {
+  background: var(--color-contrast-higher);
+}
+.btn--contrast:focus-visible {
+  box-shadow: 0 0.1px 0.3px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.06
+      ),
+    0 1px 2px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.12
+      ),
+    0 0 0 2px var(--color-bg),
+    0 0 0 4px
+      hsla(
+        var(--color-contrast-higher-h),
+        var(--color-contrast-higher-s),
+        var(--color-contrast-higher-l),
+        0.95
+      );
+}
+
+/* primary subtle */
+.btn--primary-subtle {
+  background: hsla(
+    var(--color-primary-h),
+    var(--color-primary-s),
+    var(--color-primary-l),
+    0.15
+  );
+  color: var(--color-primary);
+}
+.btn--primary-subtle:hover {
+  background: hsla(
+    var(--color-primary-h),
+    var(--color-primary-s),
+    var(--color-primary-l),
+    0.12
+  );
+}
+.btn--primary-subtle:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-primary);
+}
+
+/* accent subtle */
+.btn--accent-subtle {
+  background: hsla(
+    var(--color-accent-h),
+    var(--color-accent-s),
+    var(--color-accent-l),
+    0.15
+  );
+  color: var(--color-accent);
+}
+.btn--accent-subtle:hover {
+  background: hsla(
+    var(--color-accent-h),
+    var(--color-accent-s),
+    var(--color-accent-l),
+    0.12
+  );
+}
+.btn--accent-subtle:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* feedback */
+.btn--disabled,
+.btn[disabled],
+.btn[readonly] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* a button containing (only) an icon */
+.btn--icon {
+  padding: 0.5rem;
+}

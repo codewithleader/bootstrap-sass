@@ -1,0 +1,37 @@
+// --------- Bootstrap variables
+$primary: #0040ff;
+$secondary: #6c757d;
+$success: #58ba27;
+$info: #0c9af9;
+$warning: #ffb60c;
+$danger: #ff4b3a;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+$metallic-bronze: (
+  '50': '#f7f8ee',
+  '100': '#ebefd2',
+  '200': '#dae0a8',
+  '300': '#c8ce76',
+  '400': '#bcbf50',
+  '500': '#b0ae42',
+  '600': '#978e37',
+  '700': '#7a6c2e',
+  '800': '#66582d',
+  '900': '#594b2a',
+  '950': '#47391e',
+);
+
+
+@import '../libs/bootstrap/scss/bootstrap';
